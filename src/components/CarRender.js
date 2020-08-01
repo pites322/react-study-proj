@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 export default class CarRender extends Component{
     
@@ -26,7 +27,7 @@ export default class CarRender extends Component{
         return (
             <div>
                 {this.props.arr.map(({ id, model, color}) =>     
-                <ul key={id}>
+                <ul key={uuidv4}>
                     <li>{model}</li>
                     <li>{color}</li>
                 </ul>)}
